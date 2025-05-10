@@ -19,7 +19,7 @@ export default function ChatlitClone() {
   useEffect(() => {
     const checkApiConnection = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/`)
+        const response = await fetch('https://aiagentitimedatedaybackend.vercel.app/')
         if (response.ok) {
           setIsApiConnected(true)
         } else {
@@ -66,7 +66,7 @@ export default function ChatlitClone() {
       setInput('')
 
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/time`, {
+        const response = await fetch('https://aiagentitimedatedaybackend.vercel.app/time', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
